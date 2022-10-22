@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n1 = Number(window.prompt("Digite um número: "));
+        var n2 = Number.parseFloat(window.prompt("Digite outro número: "));//Metodo Number() se vira se é floa ou int com base nas entradas enquanto o Number.parseFloat ou Int voce força esses tipos para a entrada. Para converter algo para string usamos o metodo String(conteudo). Alem disso tem alguns metodos e atributos uteis como: nome.length nome.toUpperCase e etc
+        var soma = n1 + n2;
+        window.alert(`A soma entre ${n1} e ${n2} é: ${soma}`);
+        /*
+        node:
+        > var nome = "Diogo"
+        > var nota = 25
+        > var idade = 32
+        > "O aluno " + nome + " de idade " + idade + " teve a nota " + nota 
+        'O aluno Diogo de idade 32 teve a nota 25'
+        > `O aluno com ${nome} com idade ${idade} tirou a nota ${nota}`
+        'O aluno com Diogo com idade 32 tirou a nota 25'
+        */
+    </script>
+</body>
+</html>
