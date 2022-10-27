@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(68, 41, 223);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <div>Clique em mim</div>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        //Nos metodos get que veremos abaixo os que estiverem no plural, como por exemplo o getElementsByTagName(), nos precisamos especificar qual deles por meio de sua posição, essa posição e como um vetor e sua ordem é disposta de cima para baixo em linhas de codigo
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0];//getElementsByTagName pega todas as tags do tipo que queremos, usamos o [] com um valor para pegar apenas de uma das tags, nesse exemplo pegamos o conteudo do primeiro paragrafo e armazenamos na variavel p1.
+        window.document.write(p1.innerText);
+        p1.style.color = 'red';//aparentemente p1 recebeu o endereço de memoria de p1, isso por que conseguimos mudar a cor do paragrafo.
+        corpo.style.background = '#ff0000'
+
+        var p2 = window.document.getElementsByTagName('p')[1]
+        document.write('<br>' + p2.innerText + '<br>')
+        document.write(p2.innerHTML + '<br> teste')//Perceba ao rodar que o temos uma diferença entre innerText e innerHTML, este ultimo preservou as tags dentro do paragrafo 2
+        d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText += ' Estou aguardando'
+
+        var f = window.document.querySelector('#msg')//desse jeito referenciamos conteudo HTML da mesma forma que usamos no css para dar estilo ao HTML
+        f.innerText += ' :)'
+        f.style.color = 'blue'
+    </script>
+</body>
+</html>
